@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 13;
-    public float yRange = 6;
+    public float yRange = 8;
     public GameObject arrowPrefab;
 
     void Update()
@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
         }
         if (transform.position.y < 1)
         {
-            transform.position = new Vector3(1, transform.position.z, transform.position.x);
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
         }
         if (transform.position.y > yRange)
         {
-            transform.position = new Vector3(yRange, transform.position.z, transform.position.x);
+            transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

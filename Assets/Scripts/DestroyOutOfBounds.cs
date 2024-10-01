@@ -12,19 +12,21 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     // Update is called once per frame
 
-    private float topBound = 30;
-    private float lowerBound = -10;
+    private float topBound = 15;
+    private float lowerBound = -15;
 
     void Update()
     {
-        if (transform.position.z > topBound)
+        if (transform.position.x > topBound)
         {
             Destroy(gameObject);
         }
-        else if (transform.position.z < lowerBound)
+        else if (transform.position.x < lowerBound)
         {
-            Debug.Log("Game Over!");
+            Debug.Log("git gud bruh");
             Destroy(gameObject);
+            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
        
         

@@ -26,7 +26,6 @@ public class DestroyOutOfBounds : MonoBehaviour
             Debug.Log("git gud bruh");
             Destroy(gameObject);
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
         }
        
         
